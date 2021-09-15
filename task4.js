@@ -1,20 +1,21 @@
-const colors = ["Red", "Green", "White", "Black"];
+const mycolors = ["Red", "Green", "White", "Black"];
 
-const a = colors.toString(); 
+const a = mycolors.toString(); 
 console.log(a)
-//Output: Red,Green,White,Black
+//Output: Red,Green,White,Black//
 
-const b = colors.join(" * ");
+const c = mycolors.join(",");
+console.log(c)
+//Output [ 'Red','Green','White' ]//
+
+const b = mycolors.join("+");
 console.log(b)
 //Output: Red * Green * White * Black//
 
-const c = colors.pop();
-console.log(colors)
-//Output [ 'Red','Green','White' ]//
 
-const d = colors.push('blue');
-console.log(colors)
-//output: [ 'Red','Green','White','Blue' ]//
+
+
+
 
 
 
