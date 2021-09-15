@@ -5,7 +5,7 @@ function capitalizeFirstLetter(string) {
   console.log("tere")
   console.log("minu nimi on john")
 
-  console.log("Hello World!" === "") //false
+  console.log("tere minu nimi on john" === "") //false
 console.log("" === "") //true
   
   console.log(capitalizeFirstLetter('tere')); //uppercase
