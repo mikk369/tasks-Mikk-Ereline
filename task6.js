@@ -5,3 +5,5 @@ function repeatStr(input, times) {
 repeatStr("Hello!", 2);
 repeatStr("Hello!" , 3)
 repeatStr("Hello!" , 12)
+
+//Minu mõistus lõppeb siin//

@@ -6,7 +6,9 @@ function capitalizeFirstLetter(string) {
   console.log("minu nimi on john")
 
   console.log("tere minu nimi on john" === "") //false
-console.log("" === "") //true
+  console.log("" === "") //true
   
   console.log(capitalizeFirstLetter('tere')); //uppercase
   console.log(capitalizeFirstLetter('minu nimi on john'));//uppercase
+
+  //Minu mõistus lõppeb siin//
