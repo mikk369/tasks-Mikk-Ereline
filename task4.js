@@ -1,6 +1,6 @@
 const mycolors = ["Red", "Green", "White", "Black"];
 
-const a = mycolors.toString(); 
+const a = mycolors.toString(". "); 
 console.log(a)
 //Output: Red,Green,White,Black//
 
