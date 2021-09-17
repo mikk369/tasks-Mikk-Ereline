@@ -10,7 +10,7 @@ console.log(c)
 
 const b = mycolors.join("+");
 console.log(b)
-//Output: Red * Green * White * Black//
+//Output: Red + Green + White + Black//
 
 
 
