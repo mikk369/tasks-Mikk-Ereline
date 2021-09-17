@@ -25,12 +25,22 @@ ___
 ___
 > Files
 
-- `this file simply adds number together`
 1. **test1.js**
-- `this file gives you my birthdates and my hobbies`
+- `this file simply adds number together`
+
 2. **task2.js**
-- `this file gives you the "hello , bob" function but when name is undefined it gives you "Hello , my friend "`
+- `this file gives you my birthdates and my hobbies`
+
 3. **task3.js**
+- `this file gives you the "hello , bob" function but when name is undefined it gives you "Hello , my friend "`
+
+4. **task4.js**
+- `this file changes the spaces between words`
+
+4.1
+`does the same thing as task4.js but little differently`
+
+5.`shows if the string is true/false`
 
 
 > Info
