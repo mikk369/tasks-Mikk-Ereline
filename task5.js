@@ -1,14 +1,17 @@
 function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-  }
-  console.log("")
-  console.log("tere")
-  console.log("minu nimi on john")
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
-  console.log("tere minu nimi on john" === "") //false
-  console.log("" === "") //true
-  
-  console.log(capitalizeFirstLetter('tere')); //uppercase
-  console.log(capitalizeFirstLetter('minu nimi on john'));//uppercase
+const a1 = ' " '
+const b2 = 'tere'
+const c3 = 'minu nimi on john'
 
-  //Minu mõistus lõppeb siin//
+console.log(a1)
+console.log(b2)
+console.log(c3)
+
+console.log(a1 , b2  === "")
+console.log(c3 , "" === "")
+
+console.log(capitalizeFirstLetter(b2)); //uppercase
+console.log(capitalizeFirstLetter(c3)); //uppercase
