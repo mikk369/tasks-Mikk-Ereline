@@ -37,10 +37,13 @@ ___
 4. **task4.js**
 - `this file changes the spaces between words`
 
-4.1
+4.1 **task4.1.js** 
+
 `does the same thing as task4.js but little differently`
 
-5.`shows if the string is true/false`
+5. **task5.js**
+
+`shows if the string is true/false`
 
 
 > Info
