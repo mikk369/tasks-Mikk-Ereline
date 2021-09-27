@@ -1,22 +1,16 @@
-var random_number = Math.floor(Math.random() * 100);
+
+const random_number = Math.floor(Math.random() * 100);
 console.log(random_number);
 
-var array = [39, 69, 96, 93, 63];
-var largest = array[0];
-for (var i = 0; i < array.length; i++) {
-    if (largest < array[i] ) {
-        largest = array[i];
-    }
-}
-console.log(largest);
 
-var array = [39, 69, 96, 93, 63];
-var smallest = array[0];
-for(var i=1; i<array.length; i++){
-    if(array[i] < smallest){
-        smallest = array[i];   
-    }
-}
-console.log(smallest);
+const HighestNumber = [39, 69, 96, 93, 63];
+console.log(Math.max(...HighestNumber));
 
-//Minu mõistus lõppeb siin//
+const LowestNumber = [39, 69, 96, 93, 63];
+console.log(Math.min(...LowestNumber))
+
+const EvenNumbers = [63, 6, 96, 93, 3];
+const filtered = EvenNumbers.filter(function (array) {  //Viimast punkti mina tööle ei saanud .//
+    return (array % 2 === 0);
+});
+console.log(filtered)
