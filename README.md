@@ -45,6 +45,13 @@ ___
 
 `shows if the string is true/false`
 
+6. **task6.js**
+
+`writes "Hello!" n times`
+
+7. **task7.js**
+
+`generates random number`
 
 > Info
 * author Mikk
