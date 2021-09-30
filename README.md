@@ -31,25 +31,28 @@ ___
 2. **task2.js**
 - `this file gives you my birthdates and my hobbies`
 
-3. **task3.js**
+3.**task2.1.js**
+- `Gives birthdate with "date" `
+
+4. **task3.js**
 - `this file gives you the "hello , bob" function but when name is undefined it gives you "Hello , my friend "`
 
-4. **task4.js**
+5. **task4.js**
 - `this file changes the spaces between words`
 
 4.1 **task4.1.js** 
 
 `does the same thing as task4.js but little differently`
 
-5. **task5.js**
+6. **task5.js**
 
 `shows if the string is true/false`
 
-6. **task6.js**
+7. **task6.js**
 
 `writes "Hello!" n times`
 
-7. **task7.js**
+8. **task7.js**
 
 `generates random number`
 
