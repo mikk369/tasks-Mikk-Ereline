@@ -1,11 +1,11 @@
-const eesnimi = 'Mikk';
-const sunnipaev = 17;
-const sunnikuu = 11;
-const sunniaasta = 1989;
-const hobid = ['ujumine', 'videomängud'];
-const object = { eesnimi, sunnipaev, sunnikuu, sunniaasta, hobid }
+const firstName = 'Mikk';
+const birthDay = 17;
+const birthMonth = 11;
+const birthYear = 1989;
+const hobbies = ['ujumine', 'videomängud'];
+const object = { firstName, birthDay, birthMonth, birthYear, hobbies }
 
 console.log(object)
-console.log(sunnipaev + "." + sunnikuu + "." + sunniaasta)
+console.log(birthDay + "." + birthMonth + "." + birthYear)
 
 //Toob välja eraldi sünnikuupäeva//
