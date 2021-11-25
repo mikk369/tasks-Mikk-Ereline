@@ -12,6 +12,8 @@
             @click="getTodo(todo._id)"
           >
             {{ todo.title }} {{ todo.status }}
+            <button @click="deleteTodos(todo._id)">Delete</button>
+            <button @click="completeTodo(todo._id)">Done</button>
           </li>
         </ul>
       </div>
@@ -48,6 +50,17 @@ export default {
     const newTodo = ref("");
     const todosFromServer = ref([]);
     const singleTodo = ref({});
+
+async function deleteTodos(id) {
+  await axios.get("/api/delete-todos/" + id)
+  await getTodos()
+}
+
+async function completeTodo(id) {
+  await axios.post("/api/update-todos/" + id, { status : "COMPLETE" })
+  await getTodos()
+}
+
     async function getTodos() {
       const result = await axios.get("/api/get-todos");
       todosFromServer.value = result.data;
@@ -79,6 +92,8 @@ export default {
       addTodo,
       singleTodo,
       getTodo,
+      deleteTodos,
+      completeTodo
     };
   },
 };
