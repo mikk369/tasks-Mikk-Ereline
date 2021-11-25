@@ -23,20 +23,19 @@ router.get("/get-todo/:id", async function (request, response) {
 });
 
 router.get("/delete-todo/:id", async function (request, response) {
-  await Todos.deleteOne({ _id: request.params.id });
-  console.log("Deleting todo..");
+ await Todos.deleteOne({ _id: request.params.id });
+  console.log('Delete todo..');
   response.send({});
 });
 
 router.post("/update-todo/:id", async function (request, response) {
-  //{status: 'COMPLETE'} või {status: 'ACTIVE'}
+  // {status : 'COMPLETE'} või {status: 'ACTIVE'}
   await Todos.updateOne(
-    { _id: request.params.id }, 
-    { $set: {status: request.body.status}}
-    );
-  console.log("Deleting todo..");
-  response.send({});
-});
+    { _id: request.params.id },
+     {$set:  { status: request.body.status}});
+   console.log('Updating todo..');
+   response.send({});
+ });
 
 router.post("/add-todo", async function (request, response) {
   if (request.body.title) {
