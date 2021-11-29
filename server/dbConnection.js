@@ -10,6 +10,7 @@ const Schema = mongoose.Schema;
 const TodoSchema = new Schema({
   title: { type: String },
   status: { type: String },
+  content: { type: String },
 });
 
 const Todos = mongoose.model("Todos", TodoSchema);

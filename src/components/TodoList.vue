@@ -11,11 +11,12 @@
             class="list-group-item"
             @click="getTodo(todo._id)"
           >
-            {{ todo.title }} 
+            {{ todo.title }}
             {{ todo.status }}
 
-            <button @click="deleteTodo(todo._id)"> Delete </button>
-            <button @click="completeTodo(todo._id)"> Done </button>
+            <button @click="deleteTodo(todo._id)">Delete</button>
+            <button @click="completeTodo(todo._id)">Done</button>
+            <button @click="editTodo(todo._id)">Edit</button>
           </li>
         </ul>
       </div>
@@ -42,25 +43,36 @@
 <script>
 import { ref } from "vue";
 import axios from "axios";
+// import Modal from "./components/Modal.vue";
+
 export default {
   name: "TodoList",
   props: {
     title: String,
+    // components: {
+    //   Modal;
   },
+
   setup() {
     const todos = ref(["Read a book", "Go for a walk", "Eat food"]);
     const newTodo = ref("");
     const todosFromServer = ref([]);
     const singleTodo = ref({});
+
+    async function editTodo(id) {
+      await axios.get("/api/edit-todo/" + id);
+      await getTodos();
+    }
+
     async function deleteTodo(id) {
       await axios.get("/api/delete-todo/" + id);
       await getTodos();
     }
     async function completeTodo(id) {
-      await axios.post("/api/update-todo/" + id, { status: 'COMPLETE' });
+      await axios.post("/api/update-todo/" + id, { status: "COMPLETE" });
       await getTodos();
     }
-    
+
     async function getTodos() {
       const result = await axios.get("/api/get-todos");
       todosFromServer.value = result.data;
@@ -71,10 +83,11 @@ export default {
       singleTodo.value = result.data;
       console.log(result.data);
     }
-       async function addTodo() {
+    async function addTodo() {
       await axios.post("/api/add-todo", {
         title: newTodo.value,
         status: "ACTIVE",
+        content: "Learn Backend",
       });
       newTodo.value = "";
       await getTodos();
@@ -95,8 +108,11 @@ export default {
       getTodos,
       deleteTodo,
       completeTodo,
+      editTodo,
+      // Modal,
     };
   },
+
   methods: {
     changeState(input) {
       if (input === "ACTIVE") {

@@ -23,8 +23,8 @@ router.get("/get-todo/:id", async function (request, response) {
 });
 
 router.get("/delete-todo/:id", async function (request, response) {
- await Todos.deleteOne({ _id: request.params.id });
-  console.log('Delete todo..');
+  await Todos.deleteOne({ _id: request.params.id });
+  console.log("Delete todo..");
   response.send({});
 });
 
@@ -32,17 +32,24 @@ router.post("/update-todo/:id", async function (request, response) {
   // {status : 'COMPLETE'} või {status: 'ACTIVE'}
   await Todos.updateOne(
     { _id: request.params.id },
-     {$set:  { status: request.body.status}});
-   console.log('Updating todo..');
-   response.send({});
- });
+    { $set: { status: request.body.status } }
+  );
+  console.log("Updating todo..");
+  response.send({});
+});
 
 router.post("/add-todo", async function (request, response) {
   if (request.body.title) {
     await Todos.create(request.body);
-    console.log("Lisa todo");
+    console.log("BE Add todo");
   }
-  response.send("done");
+  response.send("BE Add todo done");
+});
+
+router.get("/edit-todo/:id", async function (request, response) {
+  const result = await Todos.editOne({ _id: request.params.id });
+  console.log(result);
+  response.send(result);
 });
 
 module.exports = router;
